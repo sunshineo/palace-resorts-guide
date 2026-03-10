@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palace Resorts — Your Ultimate Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8d48b;
+      --navy: #1a2744;
+      --navy-light: #2a3d66;
+      --cream: #faf8f2;
+      --sand: #f0ebe0;
+      --text: #2c2c2c;
+      --text-light: #666;
+      --white: #ffffff;
+      --coral: #e07a5f;
+      --teal: #3d8b8b;
+      --sage: #7a9e7e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--teal) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(201,168,76,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba(61,139,139,0.2) 0%, transparent 50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.4rem 1.4rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 50px;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--white);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 300;
+      max-width: 550px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .hero-nav a {
+      padding: 0.6rem 1.4rem;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-nav a:hover {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.4);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ─── Section Layout ─── */
+    section {
+      padding: 5rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    section > .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      margin-bottom: 2.5rem;
+      max-width: 650px;
+    }
+
+    /* ─── Divider ─── */
+    .divider {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .divider hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+    }
+
+    /* ─── Cards ─── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.75rem;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p, .card li {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ─── Tip Callout ─── */
+    .tip {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .tip .tip-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .tip p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.65;
+    }
+
+    .tip strong {
+      color: var(--gold-light);
+    }
+
+    /* ─── Included List ─── */
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .included-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1rem;
+      background: var(--white);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .included-item .check {
+      color: var(--sage);
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    /* ─── Restaurant Ranking ─── */
+    .restaurant-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .restaurant {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+    }
+
+    .restaurant-rank {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      min-width: 2.5rem;
+      text-align: center;
+    }
+
+    .restaurant h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .restaurant .location {
+      font-size: 0.78rem;
+      color: var(--teal);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.35rem;
+    }
+
+    .restaurant p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* ─── Credit Breakdown ─── */
+    .credit-visual {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+      margin: 1.5rem 0;
+    }
+
+    .credit-bar-container {
+      margin-bottom: 1.25rem;
+    }
+
+    .credit-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .credit-bar {
+      height: 12px;
+      background: var(--sand);
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
+    .credit-bar-fill {
+      height: 100%;
+      border-radius: 50px;
+      transition: width 0.6s ease;
+    }
+
+    .credit-bar-fill.spa { background: linear-gradient(90deg, var(--coral), #e8967f); width: 50%; }
+    .credit-bar-fill.activity { background: linear-gradient(90deg, var(--teal), #5aaeae); width: 50%; }
+
+    .credit-note {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: var(--sand);
+      border-radius: 10px;
+    }
+
+    .credit-note strong {
+      color: var(--coral);
+    }
+
+    /* ─── Timeline ─── */
+    .timeline {
+      position: relative;
+      padding-left: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.6rem;
+      top: 0.25rem;
+      bottom: 0.25rem;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), var(--gold-light), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.15rem;
+      top: 0.45rem;
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      border: 2px solid var(--cream);
+    }
+
+    .timeline-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.92rem;
+      color: var(--text-light);
+    }
+
+    /* ─── FAQ ─── */
+    .faq-list {
+      margin-top: 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      border: 1px solid rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 1.25rem 1.5rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      color: var(--navy);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .faq-item summary::before {
+      content: '+';
+      font-size: 1.3rem;
+      color: var(--gold);
+      font-weight: 300;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::before {
+      content: '−';
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item .faq-answer {
+      padding: 0 1.5rem 1.25rem 3rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: var(--text-light);
+      font-size: 0.8rem;
+    }
+
+    footer .footer-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 1rem;
+      border-radius: 2px;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 600px) {
+      section { padding: 3.5rem 1.25rem; }
+      .hero-nav { flex-direction: column; align-items: center; }
+      .restaurant { flex-direction: column; gap: 0.5rem; }
+      .restaurant-rank { font-size: 1.5rem; }
+      .included-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Passcode Gate ═══ -->
+  <div id="passcode-gate">
+    <div class="gate-content">
+      <div class="gate-icon">🌴</div>
+      <h1>Palace Resorts Guide</h1>
+      <p>Enter the 4-digit passcode to continue</p>
+      <div class="pin-container">
+        <input type="tel" maxlength="1" class="pin-digit" data-index="0" autocomplete="off" inputmode="numeric">
+        <input type="tel" maxlength="1" class="pin-digit" data-index="1" autocomplete="off" inputmode="numeric">
+        <input type="tel" maxlength="1" class="pin-digit" data-index="2" autocomplete="off" inputmode="numeric">
+        <input type="tel" maxlength="1" class="pin-digit" data-index="3" autocomplete="off" inputmode="numeric">
+      </div>
+      <div id="pin-error" class="pin-error"></div>
+    </div>
+  </div>
+
+  <style>
+    #passcode-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: linear-gradient(135deg, #1a2744 0%, #2a3d66 50%, #3d8b8b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    #passcode-gate.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .gate-content {
+      text-align: center;
+      padding: 2rem;
+    }
+    .gate-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      animation: sway 3s ease-in-out infinite;
+    }
+    @keyframes sway {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+    .gate-content h1 {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .gate-content > p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+    .pin-container {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .pin-digit {
+      width: 56px;
+      height: 64px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      -webkit-text-security: disc;
+      caret-color: transparent;
+    }
+    .pin-digit:focus {
+      border-color: #c9a84c;
+      background: rgba(201,168,76,0.1);
+    }
+    .pin-digit.shake {
+      animation: shake 0.4s ease;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-8px); }
+      40% { transform: translateX(8px); }
+      60% { transform: translateX(-5px); }
+      80% { transform: translateX(5px); }
+    }
+    .pin-error {
+      color: #e07a5f;
+      font-size: 0.85rem;
+      min-height: 1.25rem;
+    }
+    body.locked { overflow: hidden; }
+  </style>
+
+  <script>
+  (function() {
+    // SHA-256 hash of "1123"
+    const HASH = '4739ee3bd29e4f415da8ba9298a087e0fdc9c61378420ba8fbbab298bd74c4df';
+    const gate = document.getElementById('passcode-gate');
+    const digits = document.querySelectorAll('.pin-digit');
+    const error = document.getElementById('pin-error');
+
+    document.body.classList.add('locked');
+
+    // Check if already unlocked this session
+    if (sessionStorage.getItem('palace_unlocked') === '1') {
+      gate.classList.add('hidden');
+      document.body.classList.remove('locked');
+    } else {
+      digits[0].focus();
+    }
+
+    async function sha256(str) {
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+    }
+
+    async function checkPin() {
+      const code = Array.from(digits).map(d => d.value).join('');
+      if (code.length < 4) return;
+      const hash = await sha256(code);
+      if (hash === HASH) {
+        sessionStorage.setItem('palace_unlocked', '1');
+        gate.classList.add('hidden');
+        document.body.classList.remove('locked');
+      } else {
+        error.textContent = 'Incorrect code — try again';
+        digits.forEach(d => { d.value = ''; d.classList.add('shake'); });
+        setTimeout(() => digits.forEach(d => d.classList.remove('shake')), 400);
+        digits[0].focus();
+      }
+    }
+
+    digits.forEach((input, i) => {
+      input.addEventListener('input', () => {
+        error.textContent = '';
+        if (input.value.length === 1 && i < 3) digits[i+1].focus();
+        if (i === 3 && input.value.length === 1) checkPin();
+      });
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !input.value && i > 0) {
+          digits[i-1].focus();
+          digits[i-1].value = '';
+        }
+      });
+      // Handle paste
+      input.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const paste = (e.clipboardData.getData('text') || '').replace(/\D/g,'').slice(0,4);
+        paste.split('').forEach((ch, j) => { if (digits[j]) digits[j].value = ch; });
+        if (paste.length === 4) checkPin();
+        else if (digits[paste.length]) digits[paste.length].focus();
+      });
+    });
+  })();
+  </script>
+
+  <!-- ═══ Hero ═══ -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Diamond Elite Member Guide</div>
+      <h1>Your <em>Palace Resorts</em> Survival Guide</h1>
+      <p>Everything you need to know before, during, and after your stay — from check-in tips to the best steak in Cancún.</p>
+      <nav class="hero-nav">
+        <a href="#before">Before You Go</a>
+        <a href="#checkin">Check-In</a>
+        <a href="#credits">Credits</a>
+        <a href="#included">What's Included</a>
+        <a href="#dining">Dining</a>
+        <a href="#spa">Spa</a>
+        <a href="#golf">Golf</a>
+        <a href="#activities">Activities</a>
+        <a href="#checkout">Check-Out</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+    <div class="scroll-hint">Scroll to explore ↓</div>
+  </header>
+
+  <!-- ═══ Before You Go ═══ -->
+  <section id="before">
+    <div class="section-label">Preparation</div>
+    <h2>Before You Go</h2>
+    <p class="section-intro">A little prep goes a long way. Do these things before you leave home.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>Download the App</h3>
+        <p>Get the <strong>Palace Resorts App</strong> on your phone. It's essential — restaurants, room service, concierge, activities, and hailing golf carts are all in there.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💵</div>
+        <h3>Bring Tip Money</h3>
+        <p>~$200 for a week: <strong>$100 in singles</strong>, a <strong>$20</strong>, and the rest in <strong>$5 bills</strong>. Tipping isn't required, but it makes a noticeable difference in service — especially with concierge and pool staff.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💳</div>
+        <h3>No Foreign Transaction Fees</h3>
+        <p>Bring a credit card with <strong>no foreign transaction fees</strong>. You'll use it for the 16% service charge on credits and any extras.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👶</div>
+        <h3>Traveling with Kids?</h3>
+        <p>No need to bring a crib or stroller — the resort provides them free. Heads up: the strollers are pretty bare-minimum.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Check-In ═══ -->
+  <section id="checkin">
+    <div class="section-label">Arrival</div>
+    <h2>Getting There & Checking In</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>🛬 At the Airport</h3>
+        <p>After customs, you'll enter a "waiting" area where people try to lure you with "free" offers. <strong>Ignore everyone.</strong> Go directly outside to find your resort transportation — look for staff in khaki, sometimes holding signs with your name or "Palace Resorts." It's a shared shuttle, 15–20 min ride.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>💎 Diamond Elite Check-In</h3>
+        <p>You have <strong>Diamond Elite status</strong> — the highest level. Don't wait in normal check-in lines! Look for the dedicated Diamond area. Bellmen will direct you.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>📍 Nizuc Check-In</h3>
+        <p>Walk <strong>right</strong> through the main doors. The Diamond check-in is through a set of glass doors.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>📍 Sunrise Check-In</h3>
+        <p>Walk past the escalator on the <strong>left</strong>. The check-in area is to the left of the escalators, down a hallway. You'll see a photo area on your right.</p>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-label">💡 Pro Tip</div>
+      <p>If you get a <strong>VIP band</strong> instead of a Diamond Elite band (they have a limit), you'll check in at the normal front area instead. Either way, you get the same perks.</p>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Credits ═══ -->
+  <section id="credits">
+    <div class="section-label">Understanding Your Credits</div>
+    <h2>The Credit System</h2>
+    <p class="section-intro">A week stay gets you 1,500 credits. Here's how they break down.</p>
+
+    <div class="credit-visual">
+      <div class="credit-bar-container">
+        <div class="credit-bar-label">
+          <span>🧖 Spa Credits</span>
+          <span><strong>750</strong></span>
+        </div>
+        <div class="credit-bar">
+          <div class="credit-bar-fill spa"></div>
+        </div>
+      </div>
+      <div class="credit-bar-container">
+        <div class="credit-bar-label">
+          <span>🏄 Activity Credits</span>
+          <span><strong>750</strong></span>
+        </div>
+        <div class="credit-bar">
+          <div class="credit-bar-fill activity"></div>
+        </div>
+      </div>
+      <div class="credit-note">
+        <strong>Important:</strong> You still pay <strong>16% service charge</strong> on everything you use credits for. For example, a couples massage costing 600 credits = <strong>$96 at checkout</strong> + tip. Once credits are used up, you pay full price.
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ What's Included ═══ -->
+  <section id="included">
+    <div class="section-label">Diamond Elite Perks</div>
+    <h2>What's Included</h2>
+    <p class="section-intro">Your Diamond Elite membership unlocks a lot. All of this is already covered.</p>
+
+    <div class="included-grid">
+      <div class="included-item"><span class="check">✓</span> Three resort spas</div>
+      <div class="included-item"><span class="check">✓</span> 24/7 room service</div>
+      <div class="included-item"><span class="check">✓</span> All alcohol (incl. room upgrades)</div>
+      <div class="included-item"><span class="check">✓</span> Private golf cart service</div>
+      <div class="included-item"><span class="check">✓</span> Golf (with golf weeks booked)</div>
+      <div class="included-item"><span class="check">✓</span> Wave Rider (Sunrise & Grand)</div>
+      <div class="included-item"><span class="check">✓</span> Tennis courts</div>
+      <div class="included-item"><span class="check">✓</span> All three resorts + restaurants</div>
+      <div class="included-item"><span class="check">✓</span> Diamond-only pool sections</div>
+      <div class="included-item"><span class="check">✓</span> Mini golf</div>
+      <div class="included-item"><span class="check">✓</span> Cabanas at Unique (adults only)</div>
+      <div class="included-item"><span class="check">✓</span> Water park at The Grand</div>
+      <div class="included-item"><span class="check">✓</span> Free mani/pedi (one-time)</div>
+      <div class="included-item"><span class="check">✓</span> Hydrotherapy at any spa</div>
+    </div>
+
+    <div class="tip" style="margin-top: 1.5rem;">
+      <div class="tip-label">🥂 Alcohol Upgrade</div>
+      <p>The in-room minibar is free, but you can also <strong>request upgraded bottles</strong> — like Crown Royal or other premium spirits. Just ask what upgrades are available.</p>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Dining ═══ -->
+  <section id="dining">
+    <div class="section-label">Food & Drink</div>
+    <h2>Dining Guide</h2>
+    <p class="section-intro">Book all your dinner reservations on day one through your concierge. Aim for 6–8pm slots.</p>
+
+    <div class="card-grid" style="margin-bottom: 2rem;">
+      <div class="card">
+        <div class="card-icon">🌅</div>
+        <h3>Breakfast</h3>
+        <p>Mostly buffet-style — similar food across Nizuc and Sunrise. <strong>The Grand has sit-down options.</strong> Best pick: <strong>Habib</strong> — try the Turkish coffee.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">☀️</div>
+        <h3>Lunch</h3>
+        <p>Buffets again at most spots. The Grand has a couple of unique sit-down options. You can also <strong>order food poolside</strong> from the pool waiters.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.4rem; margin-bottom: 0.25rem;">🍽️ Top Dinner Picks</h3>
+    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">No swimsuits allowed at dinner — dress it up a bit.</p>
+
+    <div class="restaurant-list">
+      <div class="restaurant">
+        <div class="restaurant-rank">1</div>
+        <div>
+          <div class="location">The Grand</div>
+          <h3>French Restaurant</h3>
+          <p>Unforgettably good — you might want to book it twice. Order the champagne; the <strong>entire wine/champagne list is free</strong> for Diamond Elite. Go wild.</p>
+        </div>
+      </div>
+      <div class="restaurant">
+        <div class="restaurant-rank">2</div>
+        <div>
+          <div class="location">The Grand</div>
+          <h3>JC Steakhouse</h3>
+          <p>Big steaks. You can upgrade to a <strong>Tomahawk for $120</strong> if you're feeling it.</p>
+        </div>
+      </div>
+      <div class="restaurant">
+        <div class="restaurant-rank">3</div>
+        <div>
+          <div class="location">The Grand</div>
+          <h3>Habib</h3>
+          <p>Great for both breakfast and dinner. They have <strong>belly dancing twice a week</strong> — ask your concierge for the schedule and try to catch it.</p>
+        </div>
+      </div>
+      <div class="restaurant">
+        <div class="restaurant-rank">4</div>
+        <div>
+          <div class="location">Sunrise</div>
+          <h3>Agra</h3>
+          <p>Indian food. Very good.</p>
+        </div>
+      </div>
+      <div class="restaurant">
+        <div class="restaurant-rank">5</div>
+        <div>
+          <div class="location">Sunrise</div>
+          <h3>Momo</h3>
+          <p>Asian food. Hit or miss on quality — worth trying once.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Spa ═══ -->
+  <section id="spa">
+    <div class="section-label">Relaxation</div>
+    <h2>Spa Guide</h2>
+    <p class="section-intro">Three spas across the property, but one stands above the rest.</p>
+
+    <div class="card-grid">
+      <div class="card" style="border-left: 3px solid var(--gold);">
+        <div class="card-icon">⭐</div>
+        <h3>The Grand Spa</h3>
+        <p>The best and biggest spa on the property. <strong>This is the only one worth visiting.</strong> Book your spa services here so you can enjoy the Hydrotherapy area before or after.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏌️</div>
+        <h3>Golf Course Spa</h3>
+        <p>Medium-sized. Fine, but skip it — The Grand is better in every way.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌊</div>
+        <h3>Sunrise Spa</h3>
+        <p>The smallest of the three. Same recommendation: head to The Grand instead.</p>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-label">💆 Spa Tips</div>
+      <p><strong>Free mani/pedi:</strong> Diamond Elite members get one complimentary set — book it on day 1 or 2 through your concierge.<br><br>
+      <strong>Hydrotherapy:</strong> Walk in anytime at The Grand, no reservation needed.<br><br>
+      <strong>Remember:</strong> Spa services use your 750 spa credits + the 16% service charge. See the <a href="#credits" style="color: var(--gold-light);">Credit System</a> section for details.</p>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Golf ═══ -->
+  <section id="golf">
+    <div class="section-label">On the Green</div>
+    <h2>Golf</h2>
+
+    <div class="card" style="max-width: 600px;">
+      <div class="card-icon">⛳</div>
+      <h3>Complimentary Golf Access</h3>
+      <p>With Diamond Elite, you get <strong>unlimited golf</strong> at the resort. Three 9-hole courses, about a 7-minute cart ride from your room.</p>
+      <ul style="margin-top: 0.75rem;">
+        <li>Bring your own clubs or rent for ~$60/day</li>
+        <li>Play as much or as little as you want</li>
+        <li><strong>Must book using golf weeks</strong> — let the host know before you arrive if interested, since these are booked differently than regular stays</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Activities ═══ -->
+  <section id="activities">
+    <div class="section-label">Things to Do</div>
+    <h2>Activities & Excursions</h2>
+
+    <div class="card" style="max-width: 700px;">
+      <div class="card-icon">🎢</div>
+      <h3>On & Off-Resort</h3>
+      <p style="margin-bottom: 0.75rem;">There's plenty to do — the aqua park in Cancún proper (jet skis, shark ride) is a blast. Tulum and Aztec ruins are amazing but expect <strong>1+ hour drive each way</strong>.</p>
+      <ul>
+        <li>Always ask concierge about drive time before booking</li>
+        <li>Expect park entrance fees for off-resort activities</li>
+        <li>Some excursions have transportation fees on top</li>
+        <li>Activity credits cover resort-based activities</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ First Days ═══ -->
+  <section id="firstdays">
+    <div class="section-label">Day 1 & 2</div>
+    <h2>Settling In</h2>
+    <p class="section-intro">No need to rush. Get oriented, then plan your week.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>👋 Meet Your Concierge</h3>
+        <p>You'll be assigned one at check-in. Use them for <strong>everything</strong> — cabana reservations, restaurant bookings, spa appointments, activities. Call or use the in-app concierge.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🍽️ Book All Dinners</h3>
+        <p>Once you've picked your restaurants (check the app), have your concierge <strong>book all dinner reservations in one go</strong>. Aim for 6–8pm. Then you're set for the week.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>😌 Take It Easy</h3>
+        <p>If you're starving during check-in, ask to do a quick check-in, go eat, and come back for activity/spa bookings later. There's no rush.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Check-Out ═══ -->
+  <section id="checkout">
+    <div class="section-label">Departure</div>
+    <h2>Check-Out</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🚐</div>
+        <h3>Transportation</h3>
+        <p>Confirm your return shuttle date and time with your concierge. Plan to <strong>leave the resort ~3 hours before your flight</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💳</div>
+        <h3>Settle Up</h3>
+        <p>At checkout, they'll settle your spa and activity charges (the 16% service fees). They'll cut off your wristbands and give you a <strong>checkout pass</strong> — you can still eat at restaurants if you have time.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq">
+    <div class="section-label">Questions</div>
+    <h2>FAQ</h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Does the resort do their own excursions?</summary>
+        <div class="faq-answer">Ask your concierge — they can book resort-organized excursions as well as third-party ones. Resort excursions often include transportation.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How much is parking if I rent a car?</summary>
+        <div class="faq-answer">Check with the front desk on arrival. Rates can vary, but many guests use resort transportation and shuttles instead.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What are all the excursion options and where can I find details?</summary>
+        <div class="faq-answer">The Palace Resorts app has a full list of available excursions. Your concierge can also walk you through options, prices, and drive times.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer>
+    <div class="footer-divider"></div>
+    <p>Made with 🦞 &nbsp;•&nbsp; Have an amazing trip!</p>
+  </footer>
+
+</body>
+</html>
