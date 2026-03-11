@@ -23,7 +23,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -44,7 +43,6 @@
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--teal) 100%);
       overflow: hidden;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -53,14 +51,12 @@
         radial-gradient(circle at 20% 50%, rgba(201,168,76,0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 30%, rgba(61,139,139,0.2) 0%, transparent 50%);
     }
-
     .hero-content {
       position: relative;
       z-index: 1;
       padding: 2rem;
       max-width: 800px;
     }
-
     .hero-badge {
       display: inline-block;
       padding: 0.4rem 1.4rem;
@@ -72,7 +68,6 @@
       border-radius: 50px;
       margin-bottom: 2rem;
     }
-
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -81,12 +76,7 @@
       line-height: 1.15;
       margin-bottom: 1rem;
     }
-
-    .hero h1 em {
-      color: var(--gold);
-      font-style: normal;
-    }
-
+    .hero h1 em { color: var(--gold); font-style: normal; }
     .hero p {
       font-size: 1.15rem;
       color: rgba(255,255,255,0.7);
@@ -94,14 +84,12 @@
       max-width: 550px;
       margin: 0 auto 2.5rem;
     }
-
     .hero-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
       justify-content: center;
     }
-
     .hero-nav a {
       padding: 0.6rem 1.4rem;
       background: rgba(255,255,255,0.08);
@@ -114,13 +102,11 @@
       transition: all 0.3s;
       backdrop-filter: blur(8px);
     }
-
     .hero-nav a:hover {
       background: var(--gold);
       color: var(--navy);
       border-color: var(--gold);
     }
-
     .scroll-hint {
       position: absolute;
       bottom: 2rem;
@@ -132,7 +118,6 @@
       text-transform: uppercase;
       animation: bounce 2s infinite;
     }
-
     @keyframes bounce {
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50% { transform: translateX(-50%) translateY(8px); }
@@ -144,7 +129,6 @@
       max-width: 900px;
       margin: 0 auto;
     }
-
     .section-label {
       display: inline-block;
       font-size: 0.7rem;
@@ -154,14 +138,12 @@
       font-weight: 600;
       margin-bottom: 0.75rem;
     }
-
     section h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
       color: var(--navy);
       margin-bottom: 0.5rem;
     }
-
     section > .section-intro {
       font-size: 1.05rem;
       color: var(--text-light);
@@ -170,17 +152,8 @@
     }
 
     /* ─── Divider ─── */
-    .divider {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .divider hr {
-      border: none;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold-light), transparent);
-    }
+    .divider { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+    .divider hr { border: none; height: 1px; background: linear-gradient(to right, transparent, var(--gold-light), transparent); }
 
     /* ─── Cards ─── */
     .card-grid {
@@ -189,7 +162,6 @@
       gap: 1.25rem;
       margin-top: 1.5rem;
     }
-
     .card {
       background: var(--white);
       border-radius: 16px;
@@ -198,48 +170,25 @@
       box-shadow: 0 2px 20px rgba(0,0,0,0.04);
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .card:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
-
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-
+    .card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
     .card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.2rem;
       color: var(--navy);
       margin-bottom: 0.5rem;
     }
-
     .card p, .card li {
       font-size: 0.92rem;
       color: var(--text-light);
       line-height: 1.65;
     }
-
-    .card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .card ul li {
-      padding: 0.3rem 0;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-
-    .card ul li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-weight: 600;
-    }
+    .card ul { list-style: none; padding: 0; }
+    .card ul li { padding: 0.3rem 0; padding-left: 1.2rem; position: relative; }
+    .card ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
 
     /* ─── Tip Callout ─── */
     .tip {
@@ -249,7 +198,6 @@
       padding: 1.75rem;
       margin: 1.5rem 0;
     }
-
     .tip .tip-label {
       font-size: 0.7rem;
       letter-spacing: 2px;
@@ -258,16 +206,8 @@
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
-
-    .tip p {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.65;
-    }
-
-    .tip strong {
-      color: var(--gold-light);
-    }
+    .tip p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.65; }
+    .tip strong { color: var(--gold-light); }
 
     /* ─── Included List ─── */
     .included-grid {
@@ -276,7 +216,6 @@
       gap: 0.75rem;
       margin-top: 1.5rem;
     }
-
     .included-item {
       display: flex;
       align-items: center;
@@ -288,22 +227,10 @@
       color: var(--text);
       border: 1px solid rgba(0,0,0,0.04);
     }
-
-    .included-item .check {
-      color: var(--sage);
-      font-weight: 700;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
+    .included-item .check { color: var(--sage); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
 
     /* ─── Restaurant Ranking ─── */
-    .restaurant-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
+    .restaurant-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
     .restaurant {
       display: flex;
       gap: 1.25rem;
@@ -314,7 +241,6 @@
       border: 1px solid rgba(0,0,0,0.04);
       box-shadow: 0 2px 15px rgba(0,0,0,0.03);
     }
-
     .restaurant-rank {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
@@ -324,14 +250,7 @@
       min-width: 2.5rem;
       text-align: center;
     }
-
-    .restaurant h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 0.25rem;
-    }
-
+    .restaurant h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; }
     .restaurant .location {
       font-size: 0.78rem;
       color: var(--teal);
@@ -340,11 +259,7 @@
       letter-spacing: 1px;
       margin-bottom: 0.35rem;
     }
-
-    .restaurant p {
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
+    .restaurant p { font-size: 0.9rem; color: var(--text-light); }
 
     /* ─── Credit Breakdown ─── */
     .credit-visual {
@@ -355,35 +270,12 @@
       box-shadow: 0 2px 20px rgba(0,0,0,0.04);
       margin: 1.5rem 0;
     }
-
-    .credit-bar-container {
-      margin-bottom: 1.25rem;
-    }
-
-    .credit-bar-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-    }
-
-    .credit-bar {
-      height: 12px;
-      background: var(--sand);
-      border-radius: 50px;
-      overflow: hidden;
-    }
-
-    .credit-bar-fill {
-      height: 100%;
-      border-radius: 50px;
-      transition: width 0.6s ease;
-    }
-
+    .credit-bar-container { margin-bottom: 1.25rem; }
+    .credit-bar-label { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .credit-bar { height: 12px; background: var(--sand); border-radius: 50px; overflow: hidden; }
+    .credit-bar-fill { height: 100%; border-radius: 50px; transition: width 0.6s ease; }
     .credit-bar-fill.spa { background: linear-gradient(90deg, var(--coral), #e8967f); width: 50%; }
     .credit-bar-fill.activity { background: linear-gradient(90deg, var(--teal), #5aaeae); width: 50%; }
-
     .credit-note {
       font-size: 0.85rem;
       color: var(--text-light);
@@ -392,18 +284,10 @@
       background: var(--sand);
       border-radius: 10px;
     }
-
-    .credit-note strong {
-      color: var(--coral);
-    }
+    .credit-note strong { color: var(--coral); }
 
     /* ─── Timeline ─── */
-    .timeline {
-      position: relative;
-      padding-left: 2.5rem;
-      margin-top: 1.5rem;
-    }
-
+    .timeline { position: relative; padding-left: 2.5rem; margin-top: 1.5rem; }
     .timeline::before {
       content: '';
       position: absolute;
@@ -413,12 +297,7 @@
       width: 2px;
       background: linear-gradient(to bottom, var(--gold), var(--gold-light), transparent);
     }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2rem;
-    }
-
+    .timeline-item { position: relative; margin-bottom: 2rem; }
     .timeline-item::before {
       content: '';
       position: absolute;
@@ -430,24 +309,37 @@
       border-radius: 50%;
       border: 2px solid var(--cream);
     }
+    .timeline-item h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 0.35rem; }
+    .timeline-item p { font-size: 0.92rem; color: var(--text-light); }
 
-    .timeline-item h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      color: var(--navy);
-      margin-bottom: 0.35rem;
-    }
-
-    .timeline-item p {
+    /* ─── Numbered List ─── */
+    .numbered-list { list-style: none; padding: 0; counter-reset: item; margin-top: 1.5rem; }
+    .numbered-list li {
+      counter-increment: item;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border-radius: 12px;
+      margin-bottom: 0.6rem;
+      border: 1px solid rgba(0,0,0,0.04);
       font-size: 0.92rem;
       color: var(--text-light);
     }
-
-    /* ─── FAQ ─── */
-    .faq-list {
-      margin-top: 1.5rem;
+    .numbered-list li::before {
+      content: counter(item);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      min-width: 1.5rem;
+      text-align: center;
+      flex-shrink: 0;
     }
 
+    /* ─── FAQ ─── */
+    .faq-list { margin-top: 1.5rem; }
     .faq-item {
       background: var(--white);
       border-radius: 12px;
@@ -455,7 +347,6 @@
       border: 1px solid rgba(0,0,0,0.04);
       overflow: hidden;
     }
-
     .faq-item summary {
       padding: 1.25rem 1.5rem;
       font-weight: 500;
@@ -467,42 +358,39 @@
       align-items: center;
       gap: 0.75rem;
     }
-
-    .faq-item summary::before {
-      content: '+';
-      font-size: 1.3rem;
-      color: var(--gold);
-      font-weight: 300;
-      transition: transform 0.2s;
-    }
-
-    .faq-item[open] summary::before {
-      content: '−';
-    }
-
+    .faq-item summary::before { content: '+'; font-size: 1.3rem; color: var(--gold); font-weight: 300; transition: transform 0.2s; }
+    .faq-item[open] summary::before { content: '−'; }
     .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item .faq-answer { padding: 0 1.5rem 1.25rem 3rem; font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
 
-    .faq-item .faq-answer {
-      padding: 0 1.5rem 1.25rem 3rem;
-      font-size: 0.9rem;
-      color: var(--text-light);
+    /* ─── Resort Map ─── */
+    .resort-map {
+      display: flex;
+      gap: 0;
+      margin-top: 1.5rem;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.04);
     }
+    .resort-map-item {
+      flex: 1;
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      background: var(--white);
+      border-right: 1px solid var(--sand);
+    }
+    .resort-map-item:last-child { border-right: none; }
+    .resort-map-item.highlight { background: linear-gradient(135deg, var(--navy), var(--navy-light)); }
+    .resort-map-item.highlight * { color: var(--white) !important; }
+    .resort-map-item.highlight .resort-year { color: var(--gold) !important; }
+    .resort-map-item h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.25rem; }
+    .resort-year { font-size: 0.75rem; color: var(--teal); font-weight: 600; letter-spacing: 1px; margin-bottom: 0.5rem; }
+    .resort-map-item p { font-size: 0.8rem; color: var(--text-light); }
 
     /* ─── Footer ─── */
-    footer {
-      text-align: center;
-      padding: 3rem 1.5rem;
-      color: var(--text-light);
-      font-size: 0.8rem;
-    }
-
-    footer .footer-divider {
-      width: 40px;
-      height: 2px;
-      background: var(--gold);
-      margin: 0 auto 1rem;
-      border-radius: 2px;
-    }
+    footer { text-align: center; padding: 3rem 1.5rem; color: var(--text-light); font-size: 0.8rem; }
+    footer .footer-divider { width: 40px; height: 2px; background: var(--gold); margin: 0 auto 1rem; border-radius: 2px; }
 
     /* ─── Responsive ─── */
     @media (max-width: 600px) {
@@ -511,6 +399,8 @@
       .restaurant { flex-direction: column; gap: 0.5rem; }
       .restaurant-rank { font-size: 1.5rem; }
       .included-grid { grid-template-columns: 1fr; }
+      .resort-map { flex-direction: column; }
+      .resort-map-item { border-right: none; border-bottom: 1px solid var(--sand); }
     }
   </style>
 </head>
@@ -534,111 +424,49 @@
 
   <style>
     #passcode-gate {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
+      position: fixed; inset: 0; z-index: 9999;
       background: linear-gradient(135deg, #1a2744 0%, #2a3d66 50%, #3d8b8b 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       transition: opacity 0.5s, visibility 0.5s;
     }
-    #passcode-gate.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .gate-content {
-      text-align: center;
-      padding: 2rem;
-    }
-    .gate-icon {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      animation: sway 3s ease-in-out infinite;
-    }
-    @keyframes sway {
-      0%, 100% { transform: rotate(-5deg); }
-      50% { transform: rotate(5deg); }
-    }
-    .gate-content h1 {
-      font-family: 'Playfair Display', serif;
-      color: #fff;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .gate-content > p {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-    }
-    .pin-container {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
+    #passcode-gate.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .gate-content { text-align: center; padding: 2rem; }
+    .gate-icon { font-size: 3.5rem; margin-bottom: 1rem; animation: sway 3s ease-in-out infinite; }
+    @keyframes sway { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+    .gate-content h1 { font-family: 'Playfair Display', serif; color: #fff; font-size: 2rem; margin-bottom: 0.5rem; }
+    .gate-content > p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 2rem; }
+    .pin-container { display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 1rem; }
     .pin-digit {
-      width: 56px;
-      height: 64px;
-      border: 2px solid rgba(255,255,255,0.2);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-      font-size: 1.5rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      text-align: center;
-      outline: none;
+      width: 56px; height: 64px;
+      border: 2px solid rgba(255,255,255,0.2); border-radius: 12px;
+      background: rgba(255,255,255,0.08); color: #fff;
+      font-size: 1.5rem; font-family: 'Inter', sans-serif; font-weight: 600;
+      text-align: center; outline: none;
       transition: border-color 0.2s, background 0.2s;
-      -webkit-text-security: disc;
-      caret-color: transparent;
+      -webkit-text-security: disc; caret-color: transparent;
     }
-    .pin-digit:focus {
-      border-color: #c9a84c;
-      background: rgba(201,168,76,0.1);
-    }
-    .pin-digit.shake {
-      animation: shake 0.4s ease;
-    }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20% { transform: translateX(-8px); }
-      40% { transform: translateX(8px); }
-      60% { transform: translateX(-5px); }
-      80% { transform: translateX(5px); }
-    }
-    .pin-error {
-      color: #e07a5f;
-      font-size: 0.85rem;
-      min-height: 1.25rem;
-    }
+    .pin-digit:focus { border-color: #c9a84c; background: rgba(201,168,76,0.1); }
+    .pin-digit.shake { animation: shake 0.4s ease; }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(5px); } }
+    .pin-error { color: #e07a5f; font-size: 0.85rem; min-height: 1.25rem; }
     body.locked { overflow: hidden; }
   </style>
 
   <script>
   (function() {
-    // SHA-256 hash of "1123"
     const HASH = '4739ee3bd29e4f415da8ba9298a087e0fdc9c61378420ba8fbbab298bd74c4df';
     const gate = document.getElementById('passcode-gate');
     const digits = document.querySelectorAll('.pin-digit');
     const error = document.getElementById('pin-error');
-
     document.body.classList.add('locked');
-
-    // Check if already unlocked this session
     if (sessionStorage.getItem('palace_unlocked') === '1') {
       gate.classList.add('hidden');
       document.body.classList.remove('locked');
-    } else {
-      digits[0].focus();
-    }
-
+    } else { digits[0].focus(); }
     async function sha256(str) {
       const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
       return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
     }
-
     async function checkPin() {
       const code = Array.from(digits).map(d => d.value).join('');
       if (code.length < 4) return;
@@ -654,7 +482,6 @@
         digits[0].focus();
       }
     }
-
     digits.forEach((input, i) => {
       input.addEventListener('input', () => {
         error.textContent = '';
@@ -662,12 +489,8 @@
         if (i === 3 && input.value.length === 1) checkPin();
       });
       input.addEventListener('keydown', (e) => {
-        if (e.key === 'Backspace' && !input.value && i > 0) {
-          digits[i-1].focus();
-          digits[i-1].value = '';
-        }
+        if (e.key === 'Backspace' && !input.value && i > 0) { digits[i-1].focus(); digits[i-1].value = ''; }
       });
-      // Handle paste
       input.addEventListener('paste', (e) => {
         e.preventDefault();
         const paste = (e.clipboardData.getData('text') || '').replace(/\D/g,'').slice(0,4);
@@ -683,14 +506,18 @@
   <header class="hero">
     <div class="hero-content">
       <div class="hero-badge">Diamond Elite Member Guide</div>
-      <h1>Your <em>Palace Resorts</em> Survival Guide</h1>
+      <h1>Your <em>Moon Palace Cancún</em> Survival Guide</h1>
       <p>Everything you need to know before, during, and after your stay — from check-in tips to the best steak in Cancún.</p>
       <nav class="hero-nav">
+        <a href="#resort">The Resort</a>
         <a href="#before">Before You Go</a>
         <a href="#checkin">Check-In</a>
+        <a href="#diamond">Diamond Elite</a>
         <a href="#credits">Credits</a>
         <a href="#included">What's Included</a>
         <a href="#dining">Dining</a>
+        <a href="#kids">Kids</a>
+        <a href="#entertainment">Entertainment</a>
         <a href="#spa">Spa</a>
         <a href="#golf">Golf</a>
         <a href="#activities">Activities</a>
@@ -700,6 +527,38 @@
     </div>
     <div class="scroll-hint">Scroll to explore ↓</div>
   </header>
+
+  <!-- ═══ Understanding the Resort ═══ -->
+  <section id="resort">
+    <div class="section-label">Overview</div>
+    <h2>Understanding the Resort</h2>
+    <p class="section-intro">Moon Palace Cancún is actually three resorts side-by-side, plus three 9-hole golf courses. Here's the layout.</p>
+
+    <div class="resort-map">
+      <div class="resort-map-item">
+        <h3>Sunrise</h3>
+        <div class="resort-year">Built 2010</div>
+        <p>The original resort. Solid rooms, good restaurants.</p>
+      </div>
+      <div class="resort-map-item">
+        <h3>Nizuc</h3>
+        <div class="resort-year">2010 – 2014</div>
+        <p>Sits between Sunrise and The Grand.</p>
+      </div>
+      <div class="resort-map-item highlight">
+        <h3>The Grand ⭐</h3>
+        <div class="resort-year">Built 2017</div>
+        <p>The newest & best — top restaurants, entertainment, and spa. Room prices are nearly 2× Nizuc/Sunrise.</p>
+      </div>
+    </div>
+
+    <div class="tip" style="margin-top: 1.5rem;">
+      <div class="tip-label">🔒 Safe & Secure</div>
+      <p>The resort is <strong>fully gated</strong> with tight security — no one comes in or out without passing through checkpoints. The food is top-notch (20 years of visits, zero food poisoning cases). <strong>Bottled water</strong> is available everywhere you go.</p>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
 
   <!-- ═══ Before You Go ═══ -->
   <section id="before">
@@ -741,11 +600,15 @@
     <div class="timeline">
       <div class="timeline-item">
         <h3>🛬 At the Airport</h3>
-        <p>After customs, you'll enter a "waiting" area where people try to lure you with "free" offers. <strong>Ignore everyone.</strong> Go directly outside to find your resort transportation — look for staff in khaki, sometimes holding signs with your name or "Palace Resorts." It's a shared shuttle, 15–20 min ride.</p>
+        <p>After customs, you'll enter a "waiting" area where people try to lure you with "free" offers. <strong>Ignore everyone.</strong> Go directly outside to find your resort transportation. <strong>Transportation is free</strong> — included with your room.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🚐 Finding Your Shuttle</h3>
+        <p>Look for staff in <strong>khaki-colored clothes</strong>, sometimes holding signs with your name or "Palace Resorts." They should have sent instructions for how to find your driver. It's a shared shuttle (they wait for all guests), then a <strong>15–20 minute ride</strong> to the resort.</p>
       </div>
       <div class="timeline-item">
         <h3>💎 Diamond Elite Check-In</h3>
-        <p>You have <strong>Diamond Elite status</strong> — the highest level. Don't wait in normal check-in lines! Look for the dedicated Diamond area. Bellmen will direct you.</p>
+        <p>You have Diamond Elite status. <strong>Do NOT go to the normal check-in lines.</strong> Bellmen will direct you to the dedicated Diamond area. Note: there's a limit of 20 Diamond Elite bands — if they're out, you'll get a VIP band and check in at the normal area (same perks either way).</p>
       </div>
       <div class="timeline-item">
         <h3>📍 Nizuc Check-In</h3>
@@ -758,18 +621,40 @@
     </div>
 
     <div class="tip">
-      <div class="tip-label">💡 Pro Tip</div>
-      <p>If you get a <strong>VIP band</strong> instead of a Diamond Elite band (they have a limit), you'll check in at the normal front area instead. Either way, you get the same perks.</p>
+      <div class="tip-label">👧 Kids & Wristbands</div>
+      <p><strong>Under 4:</strong> No wristband needed.<br>
+      <strong>Ages 4–17:</strong> Will receive a kid's wristband.<br>
+      <strong>Adults:</strong> Diamond Elite or VIP band.</p>
     </div>
   </section>
 
   <div class="divider"><hr></div>
 
-  <!-- ═══ Credits ═══ -->
+  <!-- ═══ Diamond Elite ═══ -->
+  <section id="diamond">
+    <div class="section-label">VIP Access</div>
+    <h2>Diamond Elite Perks</h2>
+    <p class="section-intro">Diamond Elite is the highest VIP tier at the resort. Here's what it unlocks for you.</p>
+
+    <ol class="numbered-list">
+      <li><strong>Upgraded alcohol</strong> in your room and most restaurants at no extra cost</li>
+      <li><strong>Front of the line</strong> at buffets across all 3 resorts</li>
+      <li><strong>Full access to The Grand</strong> — stay at Nizuc or Sunrise (cheaper rate) but enjoy The Grand's restaurants, entertainment, and spa</li>
+      <li><strong>Diamond-only pool areas</strong> with private cabanas at each resort</li>
+      <li><strong>Unlimited golf</strong> across all three 9-hole courses</li>
+      <li><strong>Private golf cart service</strong> — call one to take you anywhere on the property</li>
+      <li><strong>Dedicated Diamond concierge</strong> — your personal go-to for everything</li>
+      <li><strong>Express Diamond check-in/out</strong> — skip the normal lines</li>
+    </ol>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Room Credits ═══ -->
   <section id="credits">
     <div class="section-label">Understanding Your Credits</div>
-    <h2>The Credit System</h2>
-    <p class="section-intro">A week stay gets you 1,500 credits. Here's how they break down.</p>
+    <h2>Room Credits</h2>
+    <p class="section-intro">Book 5+ nights and you get 1,500 credits. Here's how they break down.</p>
 
     <div class="credit-visual">
       <div class="credit-bar-container">
@@ -783,7 +668,7 @@
       </div>
       <div class="credit-bar-container">
         <div class="credit-bar-label">
-          <span>🏄 Activity Credits</span>
+          <span>🏄 Activity / Excursion Credits</span>
           <span><strong>750</strong></span>
         </div>
         <div class="credit-bar">
@@ -791,7 +676,7 @@
         </div>
       </div>
       <div class="credit-note">
-        <strong>Important:</strong> You still pay <strong>16% service charge</strong> on everything you use credits for. For example, a couples massage costing 600 credits = <strong>$96 at checkout</strong> + tip. Once credits are used up, you pay full price.
+        <strong>Important:</strong> You still pay a <strong>16% service charge</strong> on everything you use credits for. For example, a couples massage costing 600 credits = <strong>$96 at checkout</strong> + tip. Once credits run out, you pay full price.
       </div>
     </div>
   </section>
@@ -800,30 +685,31 @@
 
   <!-- ═══ What's Included ═══ -->
   <section id="included">
-    <div class="section-label">Diamond Elite Perks</div>
-    <h2>What's Included</h2>
-    <p class="section-intro">Your Diamond Elite membership unlocks a lot. All of this is already covered.</p>
+    <div class="section-label">All-Inclusive</div>
+    <h2>What's Included with Your Room</h2>
+    <p class="section-intro">Your all-inclusive room comes with a lot. All of this is already covered.</p>
 
     <div class="included-grid">
       <div class="included-item"><span class="check">✓</span> Three resort spas</div>
       <div class="included-item"><span class="check">✓</span> 24/7 room service</div>
-      <div class="included-item"><span class="check">✓</span> All alcohol (incl. room upgrades)</div>
+      <div class="included-item"><span class="check">✓</span> All alcohol + room upgrades</div>
       <div class="included-item"><span class="check">✓</span> Private golf cart service</div>
       <div class="included-item"><span class="check">✓</span> Golf (with golf weeks booked)</div>
       <div class="included-item"><span class="check">✓</span> Wave Rider (Sunrise & Grand)</div>
       <div class="included-item"><span class="check">✓</span> Tennis courts</div>
       <div class="included-item"><span class="check">✓</span> All three resorts + restaurants</div>
       <div class="included-item"><span class="check">✓</span> Diamond-only pool sections</div>
-      <div class="included-item"><span class="check">✓</span> Mini golf</div>
+      <div class="included-item"><span class="check">✓</span> Mini golf (between Sunrise/Nizuc)</div>
       <div class="included-item"><span class="check">✓</span> Cabanas at Unique (adults only)</div>
       <div class="included-item"><span class="check">✓</span> Water park at The Grand</div>
       <div class="included-item"><span class="check">✓</span> Free mani/pedi (one-time)</div>
       <div class="included-item"><span class="check">✓</span> Hydrotherapy at any spa</div>
+      <div class="included-item"><span class="check">✓</span> Airport transportation</div>
     </div>
 
     <div class="tip" style="margin-top: 1.5rem;">
       <div class="tip-label">🥂 Alcohol Upgrade</div>
-      <p>The in-room minibar is free, but you can also <strong>request upgraded bottles</strong> — like Crown Royal or other premium spirits. Just ask what upgrades are available.</p>
+      <p>You can <strong>request upgraded bottles</strong> to your room — like Crown Royal or other premium spirits. Just ask what upgrades are available.</p>
     </div>
   </section>
 
@@ -897,6 +783,52 @@
 
   <div class="divider"><hr></div>
 
+  <!-- ═══ Kids ═══ -->
+  <section id="kids">
+    <div class="section-label">Family</div>
+    <h2>Kids</h2>
+    <p class="section-intro">Plenty to keep the little ones busy while you relax.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🎮</div>
+        <h3>Playrooms & Wired Gaming</h3>
+        <p>Each resort has its own <strong>playroom and gaming area (Wired)</strong> for kids. Kids 4+ can be dropped off (check hours on arrival).</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👩‍👧</div>
+        <h3>Babysitting</h3>
+        <p>The resort partners with a babysitting company — hire a sitter for <strong>X USD/hour</strong>. Tested and recommend it, even for babies as young as 1 year old.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌈</div>
+        <h3>The Dreamery</h3>
+        <p>Full details on kids' activities and programs: <a href="https://www.moonpalacecancun.com/the-dreamery" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 500;">moonpalacecancun.com/the-dreamery</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ═══ Entertainment ═══ -->
+  <section id="entertainment">
+    <div class="section-label">Nightlife & Fun</div>
+    <h2>Entertainment</h2>
+    <p class="section-intro">Every day and night there are different entertainment options. Plan ad-hoc once you arrive using the Palace app.</p>
+
+    <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.3rem; margin-bottom: 0.25rem; margin-top: 1rem;">🍸 Adult Activities On-Resort</h3>
+
+    <ol class="numbered-list">
+      <li><strong>Unique Day Club</strong> at The Grand — Diamond Elite gets private cabanas</li>
+      <li><strong>Unique Night Club</strong> at The Grand</li>
+      <li><strong>Noir</strong> at The Grand</li>
+      <li><strong>Speakeasy Library</strong> at The Grand</li>
+      <li><strong>Club</strong> at Sunrise</li>
+    </ol>
+  </section>
+
+  <div class="divider"><hr></div>
+
   <!-- ═══ Spa ═══ -->
   <section id="spa">
     <div class="section-label">Relaxation</div>
@@ -925,7 +857,7 @@
       <div class="tip-label">💆 Spa Tips</div>
       <p><strong>Free mani/pedi:</strong> Diamond Elite members get one complimentary set — book it on day 1 or 2 through your concierge.<br><br>
       <strong>Hydrotherapy:</strong> Walk in anytime at The Grand, no reservation needed.<br><br>
-      <strong>Remember:</strong> Spa services use your 750 spa credits + the 16% service charge. See the <a href="#credits" style="color: var(--gold-light);">Credit System</a> section for details.</p>
+      <strong>Remember:</strong> Spa services use your 750 spa credits + the 16% service charge. See the <a href="#credits" style="color: var(--gold-light);">Room Credits</a> section for details.</p>
     </div>
   </section>
 
@@ -962,8 +894,9 @@
       <ul>
         <li>Always ask concierge about drive time before booking</li>
         <li>Expect park entrance fees for off-resort activities</li>
-        <li>Some excursions have transportation fees on top</li>
-        <li>Activity credits cover resort-based activities</li>
+        <li>Transportation to/from activities is usually a separate charge (cash)</li>
+        <li>Activity credits can be used — amount depends on the activity</li>
+        <li>Browse options: <a href="https://www.moonpalacecancun.com/explore-experience" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 500;">moonpalacecancun.com/explore-experience</a></li>
       </ul>
     </div>
   </section>
@@ -1017,21 +950,38 @@
 
   <!-- ═══ FAQ ═══ -->
   <section id="faq">
-    <div class="section-label">Questions</div>
+    <div class="section-label">Questions & Answers</div>
     <h2>FAQ</h2>
 
     <div class="faq-list">
+      <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.2rem; margin: 1.5rem 0 0.75rem;">🧭 Excursions</h3>
+
       <details class="faq-item">
         <summary>Does the resort do their own excursions?</summary>
-        <div class="faq-answer">Ask your concierge — they can book resort-organized excursions as well as third-party ones. Resort excursions often include transportation.</div>
+        <div class="faq-answer">No — the resort hires third-party tour companies for excursions.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How are the excursions? Do they stop at flea markets?</summary>
+        <div class="faq-answer">The excursions are okay — most are one-and-done experiences. They do stop at areas with flea markets; you'll walk through and do the tours. If you're going to pick one, <strong>snorkeling in the Cenotes</strong> is the top recommendation.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can credits be used for excursions?</summary>
+        <div class="faq-answer">Yes! Your 750 activity/excursion credits can be applied. The amount depends on the specific activity. Note: transportation to/from activities is usually a <strong>separate charge that requires cash</strong>. See the <a href="#credits" style="color: var(--teal);">Room Credits</a> section for details.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Where can I find all excursion options?</summary>
+        <div class="faq-answer">Browse the full list at <a href="https://www.moonpalacecancun.com/explore-experience" target="_blank" rel="noopener" style="color: var(--teal);">moonpalacecancun.com/explore-experience</a>. Your concierge can also walk you through options, prices, and drive times.</div>
+      </details>
+
+      <h3 style="font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.2rem; margin: 2rem 0 0.75rem;">🚗 Transportation</h3>
+
+      <details class="faq-item">
+        <summary>Is there a transportation fee to/from the resort?</summary>
+        <div class="faq-answer"><strong>No</strong> — airport transportation is included in the price of your room. Free both ways.</div>
       </details>
       <details class="faq-item">
         <summary>How much is parking if I rent a car?</summary>
-        <div class="faq-answer">Check with the front desk on arrival. Rates can vary, but many guests use resort transportation and shuttles instead.</div>
-      </details>
-      <details class="faq-item">
-        <summary>What are all the excursion options and where can I find details?</summary>
-        <div class="faq-answer">The Palace Resorts app has a full list of available excursions. Your concierge can also walk you through options, prices, and drive times.</div>
+        <div class="faq-answer">Checking with the concierge for current rates. Note: <strong>Ubers are very cheap</strong> in the area if you want a flexible alternative to renting a car.</div>
       </details>
     </div>
   </section>
@@ -1039,7 +989,7 @@
   <!-- ═══ Footer ═══ -->
   <footer>
     <div class="footer-divider"></div>
-    <p>Made with 🦞 &nbsp;•&nbsp; Have an amazing trip!</p>
+    <p>Made with 🌴 &nbsp;•&nbsp; Have an amazing trip!</p>
   </footer>
 
 </body>
