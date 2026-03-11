@@ -395,7 +395,13 @@
     /* ─── Responsive ─── */
     @media (max-width: 600px) {
       section { padding: 3.5rem 1.25rem; }
-      .hero-nav { flex-direction: column; align-items: center; }
+      .hero-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+      }
+      .hero-nav a { padding: 0.4rem 0.75rem; font-size: 0.72rem; white-space: nowrap; }
       .restaurant { flex-direction: column; gap: 0.5rem; }
       .restaurant-rank { font-size: 1.5rem; }
       .included-grid { grid-template-columns: 1fr; }
@@ -509,12 +515,12 @@
       <h1>Your <em>Moon Palace Cancún</em> Survival Guide</h1>
       <p>Everything you need to know before, during, and after your stay — from check-in tips to the best steak in Cancún.</p>
       <nav class="hero-nav">
-        <a href="#resort">The Resort</a>
+        <a href="#resort">Resort</a>
         <a href="#before">Before You Go</a>
         <a href="#checkin">Check-In</a>
-        <a href="#diamond">Diamond Elite</a>
+        <a href="#diamond">Diamond</a>
         <a href="#credits">Credits</a>
-        <a href="#included">What's Included</a>
+        <a href="#included">Included</a>
         <a href="#dining">Dining</a>
         <a href="#kids">Kids</a>
         <a href="#entertainment">Entertainment</a>
